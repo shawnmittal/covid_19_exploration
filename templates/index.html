@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Plotly Dashboard</title>
+</head>
+<body>
+    <div>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <div id="myDiv" class="plotly-graph-div" style="height:100%; width:100%;"></div>
+        <script type="text/javascript">
+                var True = true;
+                Plotly.newPlot("myDiv", 
+                            {{ data | safe}}, 
+                            {{ layout | safe }}, 
+                            {'responsive': true});
+        </script>
+    </div>
+</body>
+</html>
